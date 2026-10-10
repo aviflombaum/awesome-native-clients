@@ -1,0 +1,2157 @@
+[
+  {
+    "id": 1,
+    "slug": "zapfast",
+    "name": "ZapFast",
+    "repo": "crmne/zapfast",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "WhatsApp Desktop",
+    "replaces_key": "whatsapp",
+    "stack": "Rust · egui · whatsapp-rust",
+    "type": "native-protocol",
+    "readiness": "Actively developed",
+    "stars": 1753,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.19.0",
+      "date": "2026-10-03"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/zapfast.jpg",
+      "source_url": "https://raw.githubusercontent.com/crmne/zapfast/HEAD/docs/screenshot.png",
+      "alt": "ZapFast dark-mode window with a chat list on the left and a conversation showing a PDF attachment, voice messages, a quoted reply and a link preview"
+    },
+    "claims": [
+      {
+        "metric": "idle_ram",
+        "value": "~200 MB (vs 1.13 GB for WhatsApp Web)",
+        "platform": "Linux",
+        "source": "https://github.com/crmne/zapfast#readme",
+        "quote": "uses about 200 MB of idle RAM, against 1.13 GB for WhatsApp Web"
+      },
+      {
+        "metric": "startup_time",
+        "value": "<1 s",
+        "platform": "Linux",
+        "source": "https://github.com/crmne/zapfast#readme",
+        "quote": "In our Linux test it opens in under a second"
+      }
+    ],
+    "ux_wins": [
+      "No browser engine, links as a companion device",
+      "Themeable, with app lock and keyboard shortcuts",
+      "Universal macOS DMG and Homebrew cask"
+    ],
+    "caveats": [
+      "Unofficial client, may violate WhatsApp terms and risk suspension",
+      "Benchmarks are Linux-only",
+      "Some WhatsApp features not yet supported"
+    ],
+    "one_liner": "Rust and egui WhatsApp client that pairs as a companion device instead of wrapping WhatsApp Web."
+  },
+  {
+    "id": 2,
+    "slug": "msga",
+    "name": "Make Slack Great Again (msga)",
+    "repo": "punarinta/make-slack-great-again",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Slack Desktop",
+    "replaces_key": "slack",
+    "stack": "C++20 · custom CPU renderer · AppKit/Win32/Wayland adapters",
+    "type": "native-protocol",
+    "readiness": "Actively developed",
+    "stars": 145,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "2026-10-10",
+      "date": "2026-10-10"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": true,
+    "screenshot": {
+      "file": "assets/screenshots/msga.png",
+      "source_url": "https://raw.githubusercontent.com/punarinta/make-slack-great-again/HEAD/gfx/screenshots/recording-1.webp",
+      "alt": "msga showing a Slack workspace with a channel sidebar, the #design channel with threads, reactions and an image, and a rich-text composer"
+    },
+    "claims": [
+      {
+        "metric": "app_size",
+        "value": "2.2 MB DMG",
+        "platform": "macOS",
+        "source": "https://github.com/punarinta/make-slack-great-again#readme",
+        "quote": "4.3 MB on Linux, 3.8 MB on Windows, a 2.2 MB DMG on macOS"
+      }
+    ],
+    "ux_wins": [
+      "Starts instantly, single self-contained file",
+      "Sign in through your browser, no Slack app or tokens needed",
+      "Claude Code sessions in the same workspace rail"
+    ],
+    "caveats": [
+      "Not notarized, needs Open Anyway on first launch",
+      "Session sign-in polls instead of live push",
+      "macOS build is Apple Silicon only"
+    ],
+    "one_liner": "Slack client written from scratch in C++ with its own renderer and networking: no Electron, no web view, no GUI toolkit."
+  },
+  {
+    "id": 3,
+    "slug": "swiftcord",
+    "name": "Swiftcord",
+    "repo": "SwiftcordApp/Swiftcord",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Discord Desktop",
+    "replaces_key": "discord",
+    "stack": "Swift · SwiftUI",
+    "type": "native-swiftui",
+    "readiness": "Active (v2 distributed from swiftcord.app)",
+    "stars": 2733,
+    "last_push": "2026-10-02",
+    "license": null,
+    "latest_release": {
+      "tag": "v0.7.1",
+      "date": "2023-11-09"
+    },
+    "macos_min": "26",
+    "apple_silicon_only": true,
+    "screenshot": {
+      "file": "assets/screenshots/swiftcord.png",
+      "source_url": "https://swiftcord.app/optimized-images/mac-hero/mac-hero-1320.png",
+      "alt": "Swiftcord on a MacBook showing a Discord server with the channel list, message timeline and member list in a Liquid Glass window"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Uses system controls and Liquid Glass",
+      "Launches instantly and moves quickly between conversations",
+      "Mac and iPad support"
+    ],
+    "caveats": [
+      "Requires macOS 26 and Apple Silicon",
+      "Current v2 branch has no source code, legacy GPL code is archived on main",
+      "GitHub releases only cover the legacy 2023 build"
+    ],
+    "one_liner": "100% SwiftUI Discord client for Mac and iPad that uses system controls instead of a web shell."
+  },
+  {
+    "id": 4,
+    "slug": "sakuracord",
+    "name": "SakuraCord",
+    "repo": "SakuraCordApp/SakuraCord",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Discord Desktop",
+    "replaces_key": "discord",
+    "stack": "Swift 6.4 · SwiftUI · AppKit · Metal",
+    "type": "native-swiftui",
+    "readiness": "Young, active",
+    "stars": 136,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.1.6",
+      "date": "2026-10-08"
+    },
+    "macos_min": "27",
+    "apple_silicon_only": true,
+    "screenshot": {
+      "file": "assets/screenshots/sakuracord.jpg",
+      "source_url": "https://sakuracord.app/media/sakuracord-client-preview.webp",
+      "alt": "SakuraCord window with a server rail, channel list, #general conversation with an image attachment, and a member sidebar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Real macOS windows, menus, shortcuts and Liquid Glass",
+      "Voice and video calls with native device controls",
+      "Rich Discord content: embeds, stickers, slash commands"
+    ],
+    "caveats": [
+      "Requires macOS 27",
+      "Ad-hoc signed, not notarized",
+      "Unofficial client, compatibility can break as Discord changes"
+    ],
+    "one_liner": "SwiftUI Discord client that keeps Discord's familiar layout but behaves like a native Mac app, including voice and video."
+  },
+  {
+    "id": 5,
+    "slug": "whatsapp-desk",
+    "name": "WhatsApp Desk",
+    "repo": "vianziro/Whatsapp-Dekstop",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "WhatsApp Desktop",
+    "replaces_key": "whatsapp",
+    "stack": "Go · system WebKit (macOS) / WebView2 / WebKitGTK",
+    "type": "hybrid-webview",
+    "readiness": "New, active",
+    "stars": 220,
+    "last_push": "2026-10-04",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v1.6.3",
+      "date": "2026-10-04"
+    },
+    "macos_min": "12",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/whatsapp-desk.jpg",
+      "source_url": "https://raw.githubusercontent.com/vianziro/Whatsapp-Dekstop/HEAD/screenshots/app-window.png",
+      "alt": "WhatsApp Desk main window showing the WhatsApp Web chat list and an open conversation, with chat contents blurred"
+    },
+    "claims": [
+      {
+        "metric": "idle_ram",
+        "value": "~100 MB (app process only)",
+        "platform": "Cross-platform",
+        "source": "https://github.com/vianziro/Whatsapp-Dekstop#readme",
+        "quote": "so the app's own process stays around 100 MB"
+      }
+    ],
+    "ux_wins": [
+      "Two WhatsApp accounts in one window",
+      "Privacy mode and auto-lock shortcut",
+      "Frees WebView memory after being hidden 15 minutes"
+    ],
+    "caveats": [
+      "Still WhatsApp Web inside a system webview, not a native rewrite",
+      "Unsigned binaries, Gatekeeper prompt on first launch",
+      "Web renderer memory not included in the 100 MB figure"
+    ],
+    "one_liner": "Thin Go wrapper that runs WhatsApp Web in the system WebKit view instead of bundling Chromium."
+  },
+  {
+    "id": 6,
+    "slug": "discordo",
+    "name": "Discordo",
+    "repo": "ayn2op/discordo",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Discord Desktop",
+    "replaces_key": "discord",
+    "stack": "Go · terminal UI",
+    "type": "tui",
+    "readiness": "Established, active",
+    "stars": 5823,
+    "last_push": "2026-10-09",
+    "license": "GPL-3.0",
+    "latest_release": null,
+    "macos_min": null,
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/discordo.jpg",
+      "source_url": "https://raw.githubusercontent.com/ayn2op/discordo/HEAD/.github/preview.png",
+      "alt": "Discordo in a terminal with a guild and channel tree, a #go-chat message pane with a mentions picker, and a member list"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Keyboard-driven navigation with configurable keybindings",
+      "Password, QR code or token login",
+      "Themeable via a TOML config"
+    ],
+    "caveats": [
+      "Terminal UI, not a graphical Mac app",
+      "Unofficial clients and self-bots are against Discord's terms",
+      "No tagged releases, binaries come from nightly CI"
+    ],
+    "one_liner": "Lightweight Discord client for the terminal, with guild trees, mentions and keybindings all in a TUI."
+  },
+  {
+    "id": 7,
+    "slug": "ice-cubes",
+    "name": "Ice Cubes",
+    "repo": "Dimillian/IceCubesApp",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Mastodon web",
+    "replaces_key": "mastodon-web",
+    "stack": "Swift · SwiftUI",
+    "type": "native-swiftui",
+    "readiness": "Established, active",
+    "stars": 7081,
+    "last_push": "2026-10-08",
+    "license": "AGPL-3.0",
+    "latest_release": {
+      "tag": "2.1.4",
+      "date": "2026-10-08"
+    },
+    "macos_min": null,
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/ice-cubes.jpg",
+      "source_url": "https://raw.githubusercontent.com/Dimillian/IceCubesApp/HEAD/Images/promo.png",
+      "alt": "Ice Cubes running on iPhone, iPad and a Mac window, showing the home timeline, a profile and grouped notifications"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Dedicated sidebar layout on macOS",
+      "Unlimited accounts, switch from the sidebar in one click",
+      "Live streaming timeline with synced position across devices"
+    ],
+    "caveats": [
+      "Mastodon is an open protocol, so this is an alternative client rather than a rewrite of a closed app",
+      "Mac version distributed through the App Store"
+    ],
+    "one_liner": "Multiplatform SwiftUI Mastodon client with a Mac sidebar, multi-account switching and live timelines."
+  },
+  {
+    "id": 8,
+    "slug": "mactrix",
+    "name": "Mactrix",
+    "repo": "viktorstrate/mactrix",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Element (Matrix)",
+    "replaces_key": "element",
+    "stack": "Swift · SwiftUI · matrix-rust-sdk",
+    "type": "native-swiftui",
+    "readiness": "Early development",
+    "stars": 252,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.4.0",
+      "date": "2026-09-23"
+    },
+    "macos_min": "15.7",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/mactrix.jpg",
+      "source_url": "https://raw.githubusercontent.com/viktorstrate/mactrix/HEAD/docs/screenshot-main.png",
+      "alt": "Mactrix window with a spaces and rooms sidebar, the This Week in Matrix room timeline, and a room details inspector"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Native macOS three-pane layout",
+      "Threads, spaces, multiple windows and tabs",
+      "Emoji device verification"
+    ],
+    "caveats": [
+      "Early development, many features incomplete",
+      "No auto-updating distribution yet",
+      "No voice or video chat"
+    ],
+    "one_liner": "SwiftUI Matrix client for macOS built on matrix-rust-sdk for protocol and encryption."
+  },
+  {
+    "id": 9,
+    "slug": "nheko",
+    "name": "Nheko",
+    "repo": "Nheko-Reborn/nheko",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Element (Matrix)",
+    "replaces_key": "element",
+    "stack": "C++20 · Qt",
+    "type": "native-qt",
+    "readiness": "Established, maintained",
+    "stars": 2507,
+    "last_push": "2026-09-11",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.12.1",
+      "date": "2025-08-10"
+    },
+    "macos_min": "10.14",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/nheko.png",
+      "source_url": "https://nheko-reborn.github.io/images/screenshots/chat.png",
+      "alt": "Nheko chat window on Linux with a room list sidebar, pinned messages, and a conversation with reactions"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Feels like a mainstream chat app rather than an IRC client",
+      "E2E encryption and VoIP calls",
+      "Ctrl-K room switcher"
+    ],
+    "caveats": [
+      "E2E encryption implementation never audited",
+      "Qt UI, not Apple-native",
+      "Last stable release August 2025"
+    ],
+    "one_liner": "Qt and C++ Matrix desktop client with encryption, calls and a room switcher, an alternative to Element."
+  },
+  {
+    "id": 10,
+    "slug": "hacker-news",
+    "name": "Hacker News",
+    "repo": "IronsideXXVI/Hacker-News",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Hacker News website",
+    "replaces_key": "hacker-news-web",
+    "stack": "Swift · SwiftUI · Sparkle",
+    "type": "native-swiftui",
+    "readiness": "Maintained, modest community",
+    "stars": 429,
+    "last_push": "2026-07-23",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v1.8.5",
+      "date": "2026-02-27"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/hacker-news.jpg",
+      "source_url": "https://raw.githubusercontent.com/IronsideXXVI/Hacker-News/HEAD/.github/screenshots/stories-grid.png",
+      "alt": "Hacker News app showing front-page stories as a grid of cards with preview images, points and comment counts"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Story grid with article previews",
+      "Built-in article and threaded comment views",
+      "Sparkle auto-updates"
+    ],
+    "caveats": [
+      "Read-focused site client, not a service rewrite",
+      "Small project, last release February 2026"
+    ],
+    "one_liner": "SwiftUI Mac app for Hacker News with a story grid, in-app article reader and threaded comments."
+  },
+  {
+    "id": 11,
+    "slug": "chatterino",
+    "name": "Chatterino",
+    "repo": "Chatterino/chatterino2",
+    "repo_exists": true,
+    "category": "messaging",
+    "replaces": "Twitch web chat",
+    "replaces_key": "twitch",
+    "stack": "C++ · Qt",
+    "type": "native-qt",
+    "readiness": "Established / active",
+    "stars": 2570,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v2.5.6",
+      "date": "2026-10-04"
+    },
+    "macos_min": null,
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/chatterino.jpg",
+      "source_url": "https://github.com/Chatterino/website/blob/HEAD/public/img/example_01.png",
+      "alt": "Chatterino with two Twitch chats side by side in split panes, showing emotes and badges"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Multiple channels in tabs and split panes",
+      "Native Qt desktop app, no browser tab",
+      "Cross-platform: macOS, Windows, Linux, FreeBSD"
+    ],
+    "caveats": [
+      "Chat only, no stream video",
+      "README has no macOS version requirement"
+    ],
+    "one_liner": "Qt chat client for Twitch that puts many channels in tabs and split panes, outside the browser."
+  },
+  {
+    "id": 12,
+    "slug": "spotifast",
+    "name": "Spotifast",
+    "repo": "crmne/spotifast",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Rust · egui · librespot",
+    "type": "native-protocol",
+    "readiness": "Popular / active",
+    "stars": 7055,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.12.0",
+      "date": "2026-10-03"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/spotifast.jpg",
+      "source_url": "https://raw.githubusercontent.com/crmne/spotifast/HEAD/docs/screenshot.png",
+      "alt": "Spotifast home view with the playlist library sidebar, recommendations grid, queue panel and player bar"
+    },
+    "claims": [
+      {
+        "metric": "ram",
+        "value": "100–250 MB",
+        "platform": null,
+        "source": "https://github.com/crmne/spotifast#readme",
+        "quote": "typically uses 100–250 MB of RAM"
+      },
+      {
+        "metric": "startup_time",
+        "value": "<1 s",
+        "platform": null,
+        "source": "https://github.com/crmne/spotifast#readme",
+        "quote": "starts in well under a second, and has no browser engine"
+      }
+    ],
+    "ux_wins": [
+      "Subsecond startup",
+      "Spotify Connect and media keys",
+      "Winamp mini player and MilkDrop visuals"
+    ],
+    "caveats": [
+      "Playback needs Spotify Premium",
+      "Unofficial librespot access can break"
+    ],
+    "one_liner": "Rust and egui Spotify client that plays through librespot with no browser engine and a Winamp-style mini player."
+  },
+  {
+    "id": 13,
+    "slug": "psst",
+    "name": "Psst",
+    "repo": "jpochyla/psst",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Rust · Druid · librespot-derived core",
+    "type": "native-protocol",
+    "readiness": "Popular / early, slowing",
+    "stars": 9486,
+    "last_push": "2026-08-18",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "rolling",
+      "date": "2025-06-28"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/psst.jpg",
+      "source_url": "https://raw.githubusercontent.com/jpochyla/psst/HEAD/psst-gui/assets/screenshot.png",
+      "alt": "Psst macOS window showing an album track list with sidebar navigation and playback bar, split diagonally between dark and light themes"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Native GUI without Electron",
+      "Dark and light themes",
+      "Does not call home"
+    ],
+    "caveats": [
+      "Premium required",
+      "Needs your own Spotify Developer Client ID since Feb 2026",
+      "README says early, lacking features and stability"
+    ],
+    "one_liner": "Fast Rust Spotify client with a native Druid GUI, no Electron, and its own playback core."
+  },
+  {
+    "id": 14,
+    "slug": "spotify-qt",
+    "name": "spotify-qt",
+    "repo": "kraxarn/spotify-qt",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "C++ · Qt 6 · external librespot backend",
+    "type": "native-qt",
+    "readiness": "Established / active",
+    "stars": 1489,
+    "last_push": "2026-10-05",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v4.0.4",
+      "date": "2026-05-01"
+    },
+    "macos_min": "13",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/spotify-qt.png",
+      "source_url": "https://raw.githubusercontent.com/kraxarn/spotify-qt/HEAD/.github/img/spotify-qt.png",
+      "alt": "spotify-qt dark theme window with library and playlist sidebars and a sortable track table"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Simple, lighter Qt interface",
+      "Customizable",
+      "Small file size is a stated goal"
+    ],
+    "caveats": [
+      "Needs a separate Spotify client such as librespot for playback",
+      "Controlling playback requires Premium",
+      "Not aiming for feature parity"
+    ],
+    "one_liner": "Lightweight Qt front end for Spotify that controls a separate playback backend like librespot."
+  },
+  {
+    "id": 15,
+    "slug": "spotifust",
+    "name": "Spotifust",
+    "repo": "gefydev/spotifust",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Rust · iced · librespot · rspotify",
+    "type": "native-gpu",
+    "readiness": "Early / active",
+    "stars": 39,
+    "last_push": "2026-10-08",
+    "license": "GPL-3.0",
+    "latest_release": null,
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": null,
+    "claims": [
+      {
+        "metric": "ram",
+        "value": "<25 MB (target)",
+        "platform": null,
+        "source": "https://github.com/gefydev/spotifust#readme",
+        "quote": "Ultra-lightweight — Target baseline under 25 MB RAM"
+      }
+    ],
+    "ux_wins": [
+      "Single process, single binary",
+      "Draggable, resizable card layout",
+      "Credentials stored in OS keychain"
+    ],
+    "caveats": [
+      "Premium required",
+      "Tiny community, very early",
+      "RAM figure is a target, not a measurement"
+    ],
+    "one_liner": "Single-process Rust Spotify client built on iced with embedded librespot playback."
+  },
+  {
+    "id": 16,
+    "slug": "ncspot",
+    "name": "ncspot",
+    "repo": "hrkfdn/ncspot",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Rust · ncurses · librespot",
+    "type": "tui",
+    "readiness": "Established / active",
+    "stars": 6791,
+    "last_push": "2026-10-09",
+    "license": "BSD-2-Clause",
+    "latest_release": {
+      "tag": "v1.5.0",
+      "date": "2026-10-01"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/ncspot.png",
+      "source_url": "https://raw.githubusercontent.com/hrkfdn/ncspot/HEAD/images/screenshot.png",
+      "alt": "ncspot terminal UI showing the play queue and a now-playing status bar"
+    },
+    "claims": [
+      {
+        "metric": "ram",
+        "value": "46.2 MiB total (22.1 MiB private) vs 1000.0 MiB for official Spotify",
+        "platform": "Linux",
+        "source": "https://github.com/hrkfdn/ncspot/blob/main/doc/resource_footprint.md",
+        "quote": "Measured using `ps_mem` on Linux during playback"
+      }
+    ],
+    "ux_wins": [
+      "Vim keybindings out of the box",
+      "IPC socket for remote control",
+      "Small resource footprint"
+    ],
+    "caveats": [
+      "Premium only",
+      "Terminal UI, no artwork-driven browsing"
+    ],
+    "one_liner": "ncurses Spotify client in Rust with vim keys, inspired by MPD clients like ncmpc."
+  },
+  {
+    "id": 17,
+    "slug": "spotify-player",
+    "name": "spotify_player",
+    "repo": "aome510/spotify-player",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Rust · ratatui · librespot · rspotify",
+    "type": "tui",
+    "readiness": "Established / active",
+    "stars": 7270,
+    "last_push": "2026-09-19",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.25.1",
+      "date": "2026-09-09"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/spotify-player.jpg",
+      "source_url": "https://user-images.githubusercontent.com/40011582/140253591-706d15d4-08c9-4527-997a-79fac73dee20.png",
+      "alt": "spotify_player terminal UI with a playback panel and progress bar above a playlist track table"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Spotify Connect and in-terminal streaming",
+      "Synced lyrics and audio visualization",
+      "Daemon mode and CLI commands"
+    ],
+    "caveats": [
+      "Premium required",
+      "Daemon mode on macOS needs media control disabled",
+      "Notifications limited on macOS"
+    ],
+    "one_liner": "Configurable terminal Spotify player with streaming, Spotify Connect, lyrics and a daemon mode."
+  },
+  {
+    "id": 18,
+    "slug": "spotiglass",
+    "name": "Spotiglass",
+    "repo": "isaaclins/spotiglass",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Spotify desktop",
+    "replaces_key": "spotify",
+    "stack": "Swift · SwiftUI · Spotify Web API · Web Playback SDK (hidden WKWebView)",
+    "type": "hybrid-webview",
+    "readiness": "Early / experimental",
+    "stars": 9,
+    "last_push": "2026-10-07",
+    "license": "Custom (non-commercial)",
+    "latest_release": {
+      "tag": "v0.7.0",
+      "date": "2026-08-16"
+    },
+    "macos_min": "26",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/spotiglass.jpg",
+      "source_url": "https://raw.githubusercontent.com/isaaclins/spotiglass/HEAD/docs/assets/screens/home.webp",
+      "alt": "Spotiglass home view with playlist sidebar, recently played albums, top tracks and a glass-style player bar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Command palette search (Cmd+K)",
+      "Remappable keyboard shortcuts",
+      "Equalizer and output device settings"
+    ],
+    "caveats": [
+      "Playback runs through Web Playback SDK in a hidden WKWebView",
+      "Needs your own Spotify Developer client ID and Premium",
+      "Non-commercial license, unsigned builds"
+    ],
+    "one_liner": "SwiftUI Spotify client for macOS 26 with a command palette, using a hidden WebView only for playback."
+  },
+  {
+    "id": 19,
+    "slug": "kaset",
+    "name": "Kaset",
+    "repo": "sozercan/kaset",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube Music and YouTube web",
+    "replaces_key": "youtube-music",
+    "stack": "Swift · SwiftUI · WebKit playback",
+    "type": "hybrid-webview",
+    "readiness": "Popular / active",
+    "stars": 2378,
+    "last_push": "2026-10-03",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.14.1",
+      "date": "2026-09-24"
+    },
+    "macos_min": "15.4",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/kaset.jpg",
+      "source_url": "https://raw.githubusercontent.com/sozercan/kaset/HEAD/docs/screenshot-ytm.png",
+      "alt": "Kaset YouTube Music home with sidebar navigation, chart and playlist carousels, and a floating player bar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Apple Music-style UI with Now Playing and media keys",
+      "AppleScript and URL scheme automation",
+      "Loads WebKit extensions like uBlock Origin Lite and SponsorBlock"
+    ],
+    "caveats": [
+      "Playback still goes through WebKit",
+      "Not signed or notarized",
+      "Apple Intelligence features need macOS 26"
+    ],
+    "one_liner": "SwiftUI Mac app for YouTube Music and YouTube with native navigation, media controls and AppleScript."
+  },
+  {
+    "id": 20,
+    "slug": "smarttube",
+    "name": "SmartTube",
+    "repo": "milika/SmartTubeIOS",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube web",
+    "replaces_key": "youtube",
+    "stack": "Swift · SwiftUI · AVPlayer · Mac Catalyst",
+    "type": "native-swiftui",
+    "readiness": "Active / growing",
+    "stars": 396,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0",
+    "latest_release": null,
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/smarttube.jpg",
+      "source_url": "https://raw.githubusercontent.com/milika/SmartTubeIOS/HEAD/docs/screenshots/home.png",
+      "alt": "SmartTube home screen on iPhone with Recommended and Subscriptions video rows and a bottom tab bar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "No ads, SponsorBlock auto-skip",
+      "DeArrow community titles and thumbnails",
+      "Up to 8K playback via AVPlayer"
+    ],
+    "caveats": [
+      "Mac version is Mac Catalyst",
+      "Relies on unofficial InnerTube API",
+      "Distributed via App Store, no GitHub releases"
+    ],
+    "one_liner": "Ad-free SwiftUI YouTube client for iPhone, iPad, Mac and Apple TV with SponsorBlock and DeArrow."
+  },
+  {
+    "id": 21,
+    "slug": "yattee",
+    "name": "Yattee",
+    "repo": "yattee/yattee",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube (web)",
+    "replaces_key": "youtube",
+    "stack": "Swift · SwiftUI · Invidious/Piped/Yattee Server (yt-dlp) backends",
+    "type": "native-swiftui",
+    "readiness": "Established, v2 in beta",
+    "stars": 3736,
+    "last_push": "2026-08-23",
+    "license": "AGPL-3.0",
+    "latest_release": {
+      "tag": "v1.5.1",
+      "date": "2024-01-28"
+    },
+    "macos_min": "15",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/yattee.jpg",
+      "source_url": "https://raw.githubusercontent.com/yattee/docs/HEAD/static/img/screenshots/app/macos-home.jpg",
+      "alt": "Yattee on macOS: sidebar with subscriptions, sources and channels next to a home dashboard and recent feed videos"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Picture in Picture and background audio",
+      "SponsorBlock segment skipping",
+      "Player queue and history"
+    ],
+    "caveats": [
+      "Yattee 2 is beta-only (TestFlight or GitHub prereleases); last stable is v1.5.1 from 2024",
+      "Needs an Invidious, Piped or self-hosted Yattee Server backend"
+    ],
+    "one_liner": "Privacy-focused SwiftUI video player for iOS, tvOS and macOS that watches YouTube through Invidious, Piped or a self-hosted yt-dlp server."
+  },
+  {
+    "id": 22,
+    "slug": "nativeyoutube",
+    "name": "NativeYoutube",
+    "repo": "Aayush9029/NativeYoutube",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube (web)",
+    "replaces_key": "youtube",
+    "stack": "Swift · SwiftUI · menu bar app · YouTube Data API",
+    "type": "native-swiftui",
+    "readiness": "Alpha, active",
+    "stars": 535,
+    "last_push": "2026-09-19",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v3.2.7",
+      "date": "2026-09-12"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/nativeyoutube.jpg",
+      "source_url": "https://github.com/user-attachments/assets/0530149b-6dda-4a20-ac04-18c525e0729a",
+      "alt": "NativeYoutube promo banner showing the menu bar video list with search and a floating video player window"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Lives in the menu bar, no browser tab",
+      "Quick search and playback",
+      "Custom playlist support"
+    ],
+    "caveats": [
+      "Requires your own YouTube Data API key",
+      "Menu bar utility, not a full YouTube replacement",
+      "Free with purchase reminders"
+    ],
+    "one_liner": "Lightweight macOS menu bar YouTube client for quick search, playback and playlists without opening a browser tab."
+  },
+  {
+    "id": 23,
+    "slug": "youtube-x",
+    "name": "YouTube X",
+    "repo": "fizzygx/Youtube-X",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube (web)",
+    "replaces_key": "youtube",
+    "stack": "Swift · SwiftUI · WKWebView · bundled yt-dlp + ffmpeg",
+    "type": "hybrid-webview",
+    "readiness": "Young, active",
+    "stars": 56,
+    "last_push": "2026-08-20",
+    "license": null,
+    "latest_release": {
+      "tag": "v2.0.3",
+      "date": "2026-08-20"
+    },
+    "macos_min": "13",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/youtube-x.png",
+      "source_url": "https://github.com/user-attachments/assets/4554ec97-b5cc-48c3-a3f5-2211f7002ef6",
+      "alt": "YouTube X window with a native sidebar, the YouTube home feed in a web view and an options popover for PiP, theme and SponsorBlock"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Offline downloads of videos, Shorts and audio",
+      "Ad blocking plus optional SponsorBlock",
+      "Command palette and full keyboard shortcuts"
+    ],
+    "caveats": [
+      "UI is YouTube's website inside WKWebView, not a native rewrite",
+      "Unsigned build needs a Gatekeeper workaround",
+      "No license specified"
+    ],
+    "one_liner": "SwiftUI shell around YouTube in WKWebView that adds ad blocking, SponsorBlock and yt-dlp powered offline downloads."
+  },
+  {
+    "id": 24,
+    "slug": "hypertube-music",
+    "name": "HyperTube Music",
+    "repo": "hyper-tube/app",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube Music (web)",
+    "replaces_key": "youtube-music",
+    "stack": "C++20 · Qt Quick",
+    "type": "native-qt",
+    "readiness": "Very early, active",
+    "stars": 10,
+    "last_push": "2026-10-09",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.2.0",
+      "date": "2026-10-05"
+    },
+    "macos_min": null,
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/hypertube-music.webp",
+      "source_url": "https://raw.githubusercontent.com/hyper-tube/app/HEAD/images/home.webp",
+      "alt": "HyperTube Music home screen with Listen again and Forgotten favorites rows and a playback bar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "No Electron or bundled browser runtime",
+      "Offline mode with smart downloads",
+      "Gapless playback, crossfade and equalizer"
+    ],
+    "caveats": [
+      "Very new project with few users",
+      "Extensive feature list is unverified",
+      "Screenshot shows a non-macOS window frame"
+    ],
+    "one_liner": "Cross-platform YouTube Music client written in C++20 and Qt Quick, with no Electron and no bundled browser runtime."
+  },
+  {
+    "id": 25,
+    "slug": "riff",
+    "name": "Riff",
+    "repo": "thisizmvk/Riff",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "YouTube Music (web)",
+    "replaces_key": "youtube-music",
+    "stack": "Swift · SwiftUI · native InnerTube client · hidden WKWebView audio engine",
+    "type": "native-swiftui",
+    "readiness": "Prototype, early",
+    "stars": 2,
+    "last_push": "2026-06-20",
+    "license": "AGPL-3.0",
+    "latest_release": {
+      "tag": "v0.1.0",
+      "date": "2026-05-05"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": null,
+    "claims": [],
+    "ux_wins": [
+      "Click any thumbnail to play",
+      "Floating always-on-top mini player",
+      "Synced lyrics and media key support"
+    ],
+    "caveats": [
+      "Audio plays through a hidden WKWebView",
+      "AI and Siri features are roadmap, not shipped",
+      "Minimal adoption, InnerTube changes may break it"
+    ],
+    "one_liner": "SwiftUI YouTube Music client whose whole UI is native, using a hidden WebKit view only to play audio, including Premium tracks."
+  },
+  {
+    "id": 26,
+    "slug": "kumone",
+    "name": "Kumone",
+    "repo": "missuo/kumone",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "NetEase Cloud Music desktop",
+    "replaces_key": "netease",
+    "stack": "Swift 6 · SwiftUI · AVPlayer · native NetEase weapi/eapi client",
+    "type": "native-swiftui",
+    "readiness": "Growing, active",
+    "stars": 1128,
+    "last_push": "2026-10-08",
+    "license": "LGPL-3.0",
+    "latest_release": {
+      "tag": "v0.3.20",
+      "date": "2026-10-03"
+    },
+    "macos_min": "15",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/kumone.jpg",
+      "source_url": "https://raw.githubusercontent.com/missuo/kumone/HEAD/docs/screenshot-home.png",
+      "alt": "Kumone home view with daily recommendations, Personal FM and Heartbeat Mode cards, recommended playlists and a player bar"
+    },
+    "claims": [],
+    "ux_wins": [
+      "QR code login",
+      "Immersive now playing with synced lyrics and desktop lyrics",
+      "Notarized build with Sparkle auto-updates"
+    ],
+    "caveats": [
+      "Unofficial NetEase API integration",
+      "Playback depends on account region and licensing"
+    ],
+    "one_liner": "Native SwiftUI client for NetEase Cloud Music that talks straight to NetEase's API, with no webview and no third-party server."
+  },
+  {
+    "id": 27,
+    "slug": "melox",
+    "name": "MeloX",
+    "repo": "youshen2/MeloX",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "NetEase Cloud Music desktop",
+    "replaces_key": "netease",
+    "stack": "Swift · SwiftUI · Liquid Glass · Core ML (BeatNet)",
+    "type": "native-swiftui",
+    "readiness": "Developing, active",
+    "stars": 326,
+    "last_push": "2026-09-05",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v1.2.1",
+      "date": "2026-09-05"
+    },
+    "macos_min": "15",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/melox.jpg",
+      "source_url": "https://melox.luoxe.cn/mac/home.png",
+      "alt": "MeloX Desktop home page with a sidebar, recommendation cards for daily picks, Heartbeat Mode and Personal Roaming, and a bottom player"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Apple Music style word-by-word lyrics",
+      "Mac sidebar with persistent bottom player",
+      "On-device smart automix"
+    ],
+    "caveats": [
+      "Service changes can break the unofficial API",
+      "GitHub DMGs are unsigned; signed builds only from the website",
+      "Apple Watch app still in development"
+    ],
+    "one_liner": "SwiftUI NetEase Cloud Music client for iPhone, iPad, Mac and Apple Watch, styled after Apple Music with Liquid Glass."
+  },
+  {
+    "id": 28,
+    "slug": "moonfin",
+    "name": "Moonfin",
+    "repo": "Moonfin-Client/Moonfin-Core",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Jellyfin / Emby official clients",
+    "replaces_key": "jellyfin",
+    "stack": "Dart · Flutter · mpv",
+    "type": "flutter",
+    "readiness": "Active, growing",
+    "stars": 815,
+    "last_push": "2026-10-10",
+    "license": "GPL-2.0",
+    "latest_release": {
+      "tag": "2.7.0",
+      "date": "2026-10-09"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/moonfin.jpg",
+      "source_url": "https://github.com/user-attachments/assets/3ff05968-655f-42c7-a9ff-55b08529356c",
+      "alt": "Moonfin tablet and desktop home screen with a full-bleed featured media banner showing ratings and a synopsis"
+    },
+    "claims": [],
+    "ux_wins": [
+      "One codebase across phone, desktop, TV and web",
+      "Multi-server unified library",
+      "Offline downloads and wide codec support"
+    ],
+    "caveats": [
+      "Flutter, not native AppKit or SwiftUI",
+      "Requires a Jellyfin or Emby server"
+    ],
+    "one_liner": "Flutter media client for Jellyfin and Emby servers that runs one codebase on phones, desktops, TVs and the web."
+  },
+  {
+    "id": 29,
+    "slug": "amperfy",
+    "name": "Amperfy",
+    "repo": "BLeeEZ/amperfy",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Ampache / Subsonic web players",
+    "replaces_key": "subsonic",
+    "stack": "Swift 6 · UIKit + SwiftUI · Mac Catalyst",
+    "type": "native-swiftui",
+    "readiness": "Established, active",
+    "stars": 1793,
+    "last_push": "2026-08-13",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v2.1.1",
+      "date": "2026-08-13"
+    },
+    "macos_min": null,
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/amperfy.jpg",
+      "source_url": "https://raw.githubusercontent.com/BLeeEZ/amperfy/HEAD/.github/Screenshots/macOS-Playlist.png",
+      "alt": "Amperfy on macOS showing a library sidebar and a playlist detail view with track list and player controls"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Offline mode and gapless playback",
+      "Music, podcasts and radio in one app",
+      "On the Mac App Store"
+    ],
+    "caveats": [
+      "Requires an Ampache or Subsonic-compatible server",
+      "Mac version is a Catalyst port of the iOS app"
+    ],
+    "one_liner": "Swift music player for iOS, iPadOS and macOS that streams from your own Ampache or Subsonic server, with offline mode and gapless playback."
+  },
+  {
+    "id": 30,
+    "slug": "jellia",
+    "name": "Jellia",
+    "repo": "cjbars/jellia",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Jellyfin web music UI",
+    "replaces_key": "jellyfin",
+    "stack": "Swift 6 · SwiftUI · AVFoundation",
+    "type": "native-swiftui",
+    "readiness": "Very early, active",
+    "stars": 4,
+    "last_push": "2026-09-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.1.5",
+      "date": "2026-09-10"
+    },
+    "macos_min": "26",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/jellia.jpg",
+      "source_url": "https://raw.githubusercontent.com/cjbars/jellia/HEAD/screenshots/library.png",
+      "alt": "Jellia interface mockup with a playlist grid, sidebar and playback queue (placeholder artwork)"
+    },
+    "claims": [],
+    "ux_wins": [
+      "No Electron and no web views",
+      "Now Playing and media key integration",
+      "Credentials stored in the macOS Keychain"
+    ],
+    "caveats": [
+      "Requires macOS 26 and a Jellyfin server",
+      "Unsigned builds need the quarantine flag cleared",
+      "README screenshots are mockups"
+    ],
+    "one_liner": "Native SwiftUI music client for Jellyfin on macOS, with AVFoundation playback that stays in sync with other Jellyfin clients."
+  },
+  {
+    "id": 31,
+    "slug": "jellybeam",
+    "name": "Jellybeam",
+    "repo": "packetinspector/jellybeam-macos",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Jellyfin Media Player / Jellyfin web UI",
+    "replaces_key": "jellyfin",
+    "stack": "Rust · GPUI (Metal) · libmpv · SQLite mirror",
+    "type": "native-gpu",
+    "readiness": "Very early, active (v0.1.1, not notarized)",
+    "stars": 2,
+    "last_push": "2026-10-02",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.1.1",
+      "date": "2026-10-02"
+    },
+    "macos_min": "11",
+    "apple_silicon_only": true,
+    "screenshot": null,
+    "claims": [
+      {
+        "metric": "cold_launch",
+        "value": "< 500 ms (design budget)",
+        "platform": "macOS",
+        "source": "https://github.com/packetinspector/jellybeam-macos/blob/HEAD/docs/OVERVIEW.md",
+        "quote": "Cold launch → interactive library | < 500 ms"
+      },
+      {
+        "metric": "navigation_latency",
+        "value": "< 100 ms warm (design budget)",
+        "platform": "macOS",
+        "source": "https://github.com/packetinspector/jellybeam-macos/blob/HEAD/docs/OVERVIEW.md",
+        "quote": "View-to-view navigation (warm) | < 100 ms, zero network on the critical path"
+      },
+      {
+        "metric": "search_latency",
+        "value": "< 50 ms (design budget)",
+        "platform": "macOS",
+        "source": "https://github.com/packetinspector/jellybeam-macos/blob/HEAD/docs/OVERVIEW.md",
+        "quote": "Search keystroke → results | < 50 ms (local index)"
+      },
+      {
+        "metric": "ram",
+        "value": "< 250 MB browsing / < 500 MB playback (design budget)",
+        "platform": "macOS",
+        "source": "https://github.com/packetinspector/jellybeam-macos/blob/HEAD/docs/OVERVIEW.md",
+        "quote": "Memory: browsing / playback | < 250 MB / < 500 MB"
+      }
+    ],
+    "ux_wins": [
+      "Library browsing from a local SQLite mirror",
+      "Direct Play via libmpv with HDR/EDR output",
+      "Media keys, Now Playing, native fullscreen"
+    ],
+    "caveats": [
+      "Apple Silicon only",
+      "Releases not notarized",
+      "Tiny user base; budgets are targets, not benchmarks"
+    ],
+    "one_liner": "Jellyfin client for Apple Silicon Macs with a GPU-drawn Rust UI, libmpv playback and no web view anywhere."
+  },
+  {
+    "id": 32,
+    "slug": "postie",
+    "name": "Postie",
+    "repo": "igorkulman/Postie",
+    "repo_exists": true,
+    "category": "email-ai",
+    "replaces": "Gmail in the browser",
+    "replaces_key": "gmail",
+    "stack": "Swift · SwiftUI · Gmail API · SQLite cache",
+    "type": "native-swiftui",
+    "readiness": "Early, active (signed and notarized releases)",
+    "stars": 6,
+    "last_push": "2026-10-09",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.2.0",
+      "date": "2026-10-09"
+    },
+    "macos_min": "26",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/postie.jpg",
+      "source_url": "https://raw.githubusercontent.com/igorkulman/Postie/HEAD/docs/postie.png",
+      "alt": "Postie three-pane window with mailbox sidebar, inbox list and an open message"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Multiple Gmail accounts merged into one set of folders",
+      "Search as you type with Gmail operators",
+      "Native light/dark mode and Dock unread badge"
+    ],
+    "caveats": [
+      "Gmail only, no IMAP",
+      "Unverified Google OAuth app (100-user limit)",
+      "Requires macOS 26"
+    ],
+    "one_liner": "Small SwiftUI Gmail client for macOS: no Electron, no subscription, no AI, talking straight to the Gmail API."
+  },
+  {
+    "id": 33,
+    "slug": "brev",
+    "name": "Brev",
+    "repo": "henrikogaard/brev",
+    "repo_exists": true,
+    "category": "email-ai",
+    "replaces": "Webmail and Electron mail clients",
+    "replaces_key": "gmail",
+    "stack": "Swift · AppKit + SwiftUI · IMAP/SMTP · Gmail API",
+    "type": "native-appkit",
+    "readiness": "Pre-alpha per README (tagged pre-releases exist)",
+    "stars": 3,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.2.6",
+      "date": "2026-10-09"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/brev.jpg",
+      "source_url": "https://raw.githubusercontent.com/henrikogaard/brev/HEAD/docs/qa/navigation-polish-2026-09-29/macos-main-large-native.png",
+      "alt": "Brev macOS three-column window in a dark theme with folder sidebar, threaded message list and reading pane (Norwegian UI labels, demo mailbox)"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Real Mac app with menu bar, NSToolbar and shortcuts",
+      "37 built-in themes plus JSON user themes",
+      "Zero telemetry, local-first"
+    ],
+    "caveats": [
+      "Pre-alpha, not ready for daily use",
+      "Real-provider QA still in progress",
+      "Screenshot is an internal QA capture of a demo mailbox"
+    ],
+    "one_liner": "Local-first, telemetry-free mail client for macOS and iOS built on standard IMAP/SMTP plus the Gmail API."
+  },
+  {
+    "id": 34,
+    "slug": "powerusermail",
+    "name": "PowerUserMail",
+    "repo": "isaaclins/powerusermail",
+    "repo_exists": true,
+    "category": "email-ai",
+    "replaces": "Superhuman",
+    "replaces_key": "superhuman",
+    "stack": "Swift · SwiftUI · command palette",
+    "type": "native-swiftui",
+    "readiness": "Experimental (last tagged build Dec 2025)",
+    "stars": 6,
+    "last_push": "2026-10-07",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v2025.12.03-28",
+      "date": "2025-12-03"
+    },
+    "macos_min": "26",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/powerusermail.jpg",
+      "source_url": "https://raw.githubusercontent.com/isaaclins/powerusermail/HEAD/docs/screenshots/inbox-light.webp",
+      "alt": "PowerUserMail inbox grouped by sender on the left with a chat-style conversation open on the right (sample mailbox)"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Cmd+K command palette for search and actions",
+      "Mail grouped into per-person conversations",
+      "Gmail, Outlook and IMAP accounts"
+    ],
+    "caveats": [
+      "Screenshots use a built-in demo mailbox",
+      "No release since Dec 2025",
+      "Requires macOS 26 (Xcode deployment target)"
+    ],
+    "one_liner": "Keyboard-first SwiftUI mail client with a Cmd+K palette, an open take on Superhuman-style workflows."
+  },
+  {
+    "id": 35,
+    "slug": "clarc",
+    "name": "Clarc",
+    "repo": "ttnear/Clarc",
+    "repo_exists": true,
+    "category": "email-ai",
+    "replaces": "Claude Code CLI in a terminal",
+    "replaces_key": "claude-code-cli",
+    "stack": "Swift · SwiftUI · SwiftTerm · wraps official claude CLI",
+    "type": "native-swiftui",
+    "readiness": "Active, niche (signed and notarized, Homebrew cask)",
+    "stars": 368,
+    "last_push": "2026-08-20",
+    "license": "Apache-2.0",
+    "latest_release": {
+      "tag": "v1.4.1",
+      "date": "2026-08-20"
+    },
+    "macos_min": "15",
+    "apple_silicon_only": null,
+    "screenshot": {
+      "file": "assets/screenshots/clarc.jpg",
+      "source_url": "https://raw.githubusercontent.com/ttnear/Clarc/HEAD/docs/screenshot.png",
+      "alt": "Clarc window with session history sidebar, streaming Claude Code chat and an embedded terminal showing usage limits"
+    },
+    "claims": [
+      {
+        "metric": "app_size",
+        "value": "~6 MB download / ~14 MB unpacked",
+        "platform": "macOS",
+        "source": "https://github.com/ttnear/Clarc#readme",
+        "quote": "about 6 MB to download and about 14 MB unpacked, without bundling a browser runtime"
+      }
+    ],
+    "ux_wins": [
+      "Diff preview in permission prompts before tools run",
+      "Per-project windows with background streams",
+      "Built-in file tree, Git status and terminal"
+    ],
+    "caveats": [
+      "Requires Claude Code CLI installed and authenticated",
+      "Not a Claude.ai desktop replacement",
+      "GitHub API reports no license (README says Apache-2.0)"
+    ],
+    "one_liner": "SwiftUI desktop client for Claude Code that runs the real claude CLI underneath, so CLAUDE.md, skills and MCP keep working.",
+    "compare": false
+  },
+  {
+    "id": 36,
+    "slug": "zed",
+    "name": "Zed",
+    "repo": "zed-industries/zed",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "VS Code",
+    "replaces_key": "vscode",
+    "stack": "Rust · GPUI (Metal on macOS)",
+    "type": "native-gpu",
+    "readiness": "Mature, very popular",
+    "stars": 91539,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0-or-later",
+    "latest_release": {
+      "tag": "v1.23.2",
+      "date": "2026-10-07"
+    },
+    "macos_min": "12",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/zed.jpg",
+      "source_url": "https://zed.dev/img/home/og.webp",
+      "alt": "Zed editor window with an agent thread panel on the left and Rust source open in the editor on the right"
+    },
+    "claims": [
+      {
+        "metric": "frame_rate",
+        "value": "120 FPS rendering target",
+        "platform": "macOS",
+        "source": "https://zed.dev/blog/videogame",
+        "quote": "Leveraging Rust and the GPU to render user interfaces at 120 FPS"
+      }
+    ],
+    "ux_wins": [
+      "GPU-rendered UI built for responsiveness",
+      "Built-in multiplayer collaboration",
+      "Integrated AI agent panel"
+    ],
+    "caveats": [
+      "Extension ecosystem smaller than VS Code",
+      "Mixed licensing (GPL-3.0-or-later plus Apache-2.0 parts)",
+      "macOS 10.15 and 11 only partially supported"
+    ],
+    "one_liner": "Rust code editor from the creators of Atom and Tree-sitter, drawn on the GPU by its own GPUI framework."
+  },
+  {
+    "id": 37,
+    "slug": "codeedit",
+    "name": "CodeEdit",
+    "repo": "CodeEditApp/CodeEdit",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "VS Code",
+    "replaces_key": "vscode",
+    "stack": "Swift · AppKit + SwiftUI",
+    "type": "native-swiftui",
+    "readiness": "Pre-release, not recommended for production (per README)",
+    "stars": 23065,
+    "last_push": "2026-08-18",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.3.6",
+      "date": "2025-08-26"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/codeedit.jpg",
+      "source_url": "https://user-images.githubusercontent.com/806104/194004176-3143d19f-1ad9-449c-bd41-8c4f9998f44b.png",
+      "alt": "CodeEdit window with project navigator, tabbed JSX editor and minimap, cropped as the README banner"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Mac-only design following Apple HIG",
+      "Xcode-like feel for non-Apple projects",
+      "Free and open source forever"
+    ],
+    "caveats": [
+      "Not yet recommended for production use",
+      "No tagged release since Aug 2025",
+      "Far smaller extension ecosystem than VS Code"
+    ],
+    "one_liner": "Community-built code editor written entirely for macOS, aiming for TextEdit lightness that scales up toward Xcode."
+  },
+  {
+    "id": 38,
+    "slug": "lapce",
+    "name": "Lapce",
+    "repo": "lapce/lapce",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "VS Code",
+    "replaces_key": "vscode",
+    "stack": "Rust · Floem · wgpu",
+    "type": "native-gpu",
+    "readiness": "Pre-1.0, active repo (last release Jan 2026)",
+    "stars": 38902,
+    "last_push": "2026-10-09",
+    "license": "Apache-2.0",
+    "latest_release": {
+      "tag": "v0.4.6",
+      "date": "2026-01-21"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/lapce.jpg",
+      "source_url": "https://raw.githubusercontent.com/lapce/lapce/HEAD/extra/images/screenshot.png",
+      "alt": "Lapce editor with file explorer, Rust source showing an LSP completion popup, and integrated terminal"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Built-in LSP support",
+      "First-class toggleable Vim-style modal editing",
+      "Built-in remote development"
+    ],
+    "caveats": [
+      "Still pre-1.0",
+      "WASI plugin system, not VS Code extensions",
+      "Speed claims are qualitative only"
+    ],
+    "one_liner": "Pure-Rust code editor with a Floem UI rendered via wgpu and xi-editor rope internals."
+  },
+  {
+    "id": 39,
+    "slug": "ghostty",
+    "name": "Ghostty",
+    "repo": "ghostty-org/ghostty",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "Hyper",
+    "replaces_key": "hyper",
+    "stack": "Zig · Swift/AppKit/SwiftUI · Metal",
+    "type": "native-appkit",
+    "readiness": "Stable, mature",
+    "stars": 62031,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": null,
+    "macos_min": "13",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/ghostty.jpg",
+      "source_url": "https://ghostty.org/images/1-3-0/macos-search.png",
+      "alt": "Ghostty terminal window on macOS with the native find bar highlighting matches in the scrollback"
+    },
+    "claims": [
+      {
+        "metric": "throughput",
+        "value": "~100x faster than Terminal.app and iTerm",
+        "platform": "macOS",
+        "source": "https://github.com/ghostty-org/ghostty#readme",
+        "quote": "Ghostty and Alacritty are usually within a few percentage points of each other on various benchmarks, but are both something like 100x faster than Terminal.app and iTerm."
+      }
+    ],
+    "ux_wins": [
+      "Platform-native tabs, splits and windows",
+      "Metal renderer with SIMD-optimized parser",
+      "Wide modern protocol support (Kitty graphics, sync rendering)"
+    ],
+    "caveats": [
+      "No GitHub releases; download from ghostty.org",
+      "Benchmark claim is approximate, no published numbers",
+      "A terminal, not an AI or remote workspace like Warp"
+    ],
+    "one_liner": "Fast terminal emulator with a real native macOS UI and GPU rendering, plus an embeddable libghostty core."
+  },
+  {
+    "id": 40,
+    "slug": "kitty",
+    "name": "kitty",
+    "repo": "kovidgoyal/kitty",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "Hyper",
+    "replaces_key": "hyper",
+    "stack": "C · Python · OpenGL",
+    "type": "native-gpu",
+    "readiness": "Mature",
+    "stars": 35222,
+    "last_push": "2026-10-10",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v0.49.2",
+      "date": "2026-10-01"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/kitty.jpg",
+      "source_url": "https://raw.githubusercontent.com/kovidgoyal/kitty/HEAD/docs/screenshots/screenshot.png",
+      "alt": "kitty with tiled windows: Vim editing a README, a git log, a commit diff and a shell"
+    },
+    "claims": [
+      {
+        "metric": "throughput",
+        "value": "134.55 MB/s average (vs 54.05 Alacritty)",
+        "platform": "Linux",
+        "source": "https://sw.kovidgoyal.net/kitty/performance/",
+        "quote": "kitty is twice as fast as the next best"
+      },
+      {
+        "metric": "cpu",
+        "value": "6-8% while scrolling in less",
+        "platform": "Linux",
+        "source": "https://sw.kovidgoyal.net/kitty/performance/",
+        "quote": "uses much less CPU than all terminals, except xterm"
+      },
+      {
+        "metric": "input_latency",
+        "value": "tied best with Terminal.app on macOS (no number given)",
+        "platform": "macOS",
+        "source": "https://sw.kovidgoyal.net/kitty/performance/",
+        "quote": "kitty has best in class keyboard to screen latency"
+      }
+    ],
+    "ux_wins": [
+      "Built-in tiling layouts, tabs and splits",
+      "Kitty graphics protocol for images in the terminal",
+      "Scriptable via kittens and remote control"
+    ],
+    "caveats": [
+      "Not AppKit-native chrome",
+      "Config file driven, steeper setup",
+      "Published benchmarks run on Linux hardware"
+    ],
+    "one_liner": "GPU-based, keyboard-driven terminal with tiling layouts and its own graphics protocol, scriptable in Python."
+  },
+  {
+    "id": 41,
+    "slug": "alacritty",
+    "name": "Alacritty",
+    "repo": "alacritty/alacritty",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "Hyper terminal",
+    "replaces_key": "hyper",
+    "stack": "Rust · OpenGL",
+    "type": "native-gpu",
+    "readiness": "Mature / popular (README still labels it beta)",
+    "stars": 65924,
+    "last_push": "2026-10-05",
+    "license": "Apache-2.0",
+    "latest_release": {
+      "tag": "v0.17.0",
+      "date": "2026-04-06"
+    },
+    "macos_min": "10.12",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/alacritty.png",
+      "source_url": "https://raw.githubusercontent.com/alacritty/alacritty/master/extra/promo/alacritty-readme.png",
+      "alt": "Alacritty terminal running a modal text editor on Rust source code, with a status line at the bottom"
+    },
+    "claims": [
+      {
+        "metric": "throughput",
+        "value": "Top vtebench scores (no number given)",
+        "platform": "all",
+        "source": "https://github.com/alacritty/alacritty#faq",
+        "quote": "Alacritty uses vtebench to quantify terminal emulator throughput and manages to consistently score better than the competition using it."
+      }
+    ],
+    "ux_wins": [
+      "GPU-accelerated rendering",
+      "Sensible defaults with a single TOML config",
+      "Cross-platform: macOS, Linux, BSD, Windows"
+    ],
+    "caveats": [
+      "No tabs or splits, pair it with tmux or a window manager",
+      "README still calls it beta",
+      "No GUI settings editor"
+    ],
+    "one_liner": "Minimal OpenGL terminal emulator in Rust that leaves tabs and splits to tmux and puts its effort into raw speed."
+  },
+  {
+    "id": 42,
+    "slug": "gitup",
+    "name": "GitUp",
+    "repo": "git-up/GitUp",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "GitKraken / GitHub Desktop",
+    "replaces_key": "gitkraken",
+    "stack": "Objective-C · AppKit · libgit2 (GitUpKit)",
+    "type": "native-appkit",
+    "readiness": "Mature / active",
+    "stars": 12133,
+    "last_push": "2026-10-08",
+    "license": "GPL-3.0",
+    "latest_release": {
+      "tag": "v1.5.0",
+      "date": "2026-07-15"
+    },
+    "macos_min": "12.4",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/gitup.png",
+      "source_url": "https://github.com/user-attachments/assets/e904078c-f6de-486f-8e61-e1e6cdc57afb",
+      "alt": "GitUp repository map showing branch graph with a context menu of commit actions like fixup, squash and rebase"
+    },
+    "claims": [
+      {
+        "metric": "ui_speed",
+        "value": "Faster than the command line (qualitative)",
+        "platform": "macOS",
+        "source": "https://github.com/git-up/GitUp#readme",
+        "quote": "A ridiculously fast UI, often faster than the command line."
+      }
+    ],
+    "ux_wins": [
+      "Live, editable repo graph",
+      "Unlimited undo/redo, even for rebases and merges",
+      "Instant search across the entire repo including diffs"
+    ],
+    "caveats": [
+      "Mac only",
+      "No pull request or issue tracking features",
+      "macOS minimum taken from build settings, not stated in README"
+    ],
+    "one_liner": "Native Mac Git client that talks straight to the Git database and lets you edit history by manipulating the commit graph."
+  },
+  {
+    "id": 43,
+    "slug": "gitbutler",
+    "name": "GitButler",
+    "repo": "gitbutlerapp/gitbutler",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "GitKraken / GitHub Desktop",
+    "replaces_key": "gitkraken",
+    "stack": "Rust · Tauri · Svelte · TypeScript",
+    "type": "tauri",
+    "readiness": "Mature / active",
+    "stars": 21794,
+    "last_push": "2026-10-10",
+    "license": "Fair Source (FSL, converts to MIT after 2 years)",
+    "latest_release": {
+      "tag": "release/0.22.3",
+      "date": "2026-08-29"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/gitbutler.png",
+      "source_url": "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/app-preview-light.png",
+      "alt": "GitButler desktop app with unassigned changes on the left and two parallel branch lanes showing commits and Create PR buttons"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Stacked and parallel branches without switching",
+      "Drag-and-drop commit edits, no rebase -i",
+      "Undo timeline for every operation"
+    ],
+    "caveats": [
+      "Tauri webview UI, not native widgets",
+      "Fair Source license, not OSI open source",
+      "No published size or memory numbers"
+    ],
+    "one_liner": "Tauri Git client built around parallel and stacked branches, with drag-and-drop commit surgery and a matching `but` CLI."
+  },
+  {
+    "id": 44,
+    "slug": "lazygit",
+    "name": "Lazygit",
+    "repo": "jesseduffield/lazygit",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "GitKraken / GitHub Desktop",
+    "replaces_key": "gitkraken",
+    "stack": "Go · gocui terminal UI",
+    "type": "tui",
+    "readiness": "Mature / popular",
+    "stars": 83083,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.66.0",
+      "date": "2026-10-05"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/lazygit.png",
+      "source_url": "https://raw.githubusercontent.com/jesseduffield/lazygit/assets/demo/commit_and_push-compressed.gif",
+      "alt": "Lazygit terminal UI with status, files, branches and commits panels, a staged diff, and the commit summary prompt open (still frame from the project's demo GIF)"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Stage individual hunks or lines with a keypress",
+      "Interactive rebase without editing a TODO file",
+      "Cherry-pick, bisect and undo built in"
+    ],
+    "caveats": [
+      "Terminal only",
+      "GitUI's own benchmark shows it using 2.6 GB on the full Linux repo",
+      "No hosted PR review UI"
+    ],
+    "one_liner": "Keyboard-driven terminal UI for Git that makes hunk staging, interactive rebase and cherry-picking a keypress away."
+  },
+  {
+    "id": 45,
+    "slug": "gitui",
+    "name": "GitUI",
+    "repo": "gitui-org/gitui",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "GitKraken / GitHub Desktop",
+    "replaces_key": "gitkraken",
+    "stack": "Rust · ratatui · libgit2",
+    "type": "tui",
+    "readiness": "Beta (per README) / active",
+    "stars": 22554,
+    "last_push": "2026-10-06",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.28.1",
+      "date": "2026-03-24"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/gitui.png",
+      "source_url": "https://raw.githubusercontent.com/gitui-org/gitui/HEAD/assets/light-theme.png",
+      "alt": "GitUI in a light terminal theme showing unstaged and staged file trees beside a diff of a Linux kernel header"
+    },
+    "claims": [
+      {
+        "metric": "parse_time",
+        "value": "24 s (lazygit 57 s, tig 4 m 20 s)",
+        "platform": "Linux kernel repo, 900k+ commits",
+        "source": "https://github.com/gitui-org/gitui#bench",
+        "quote": "| `gitui` | **24 s** ✅ | **0.17** ✅ | 10 | **No** ✅ | **No** ✅ |"
+      },
+      {
+        "metric": "peak_ram",
+        "value": "0.17 GB (lazygit 2.6 GB, tig 1.3 GB)",
+        "platform": "Linux kernel repo, 900k+ commits",
+        "source": "https://github.com/gitui-org/gitui#bench",
+        "quote": "| `lazygit` | 57 s | 2.6 | 25 | Yes | Sometimes |"
+      },
+      {
+        "metric": "binary_size",
+        "value": "10 MB (lazygit 25 MB, tig 0.6 MB)",
+        "platform": "all",
+        "source": "https://github.com/gitui-org/gitui#bench",
+        "quote": "| `tig` | 4 m 20 s | 1.3 | **0.6** ✅ | Sometimes | **No** ✅ |"
+      }
+    ],
+    "benchmark_table": {
+      "source": "https://github.com/gitui-org/gitui#bench",
+      "context": "Parsing the entire Linux git repository (over 900k commits), from a RustBerlin meetup presentation by the author",
+      "columns": [
+        "Tool",
+        "Time",
+        "Memory (GB)",
+        "Binary (MB)",
+        "Freezes",
+        "Crashes"
+      ],
+      "rows": [
+        [
+          "gitui",
+          "24 s",
+          "0.17",
+          "10",
+          "No",
+          "No"
+        ],
+        [
+          "lazygit",
+          "57 s",
+          "2.6",
+          "25",
+          "Yes",
+          "Sometimes"
+        ],
+        [
+          "tig",
+          "4 m 20 s",
+          "1.3",
+          "0.6",
+          "Sometimes",
+          "No"
+        ]
+      ]
+    },
+    "ux_wins": [
+      "Context-based help, no hotkeys to memorize",
+      "Async Git API keeps the UI responsive on huge repos",
+      "Stage files, hunks and lines"
+    ],
+    "caveats": [
+      "Self-described beta",
+      "No interactive rebase or branch graph yet",
+      "Benchmark is the author's own and dated"
+    ],
+    "one_liner": "Rust terminal Git UI whose own benchmark parses the Linux repo in 24 s using 0.17 GB, against Lazygit's 57 s and 2.6 GB."
+  },
+  {
+    "id": 46,
+    "slug": "yaak",
+    "name": "Yaak",
+    "repo": "mountain-loop/yaak",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "Postman / Insomnia",
+    "replaces_key": "postman",
+    "stack": "Rust · Tauri · React",
+    "type": "tauri",
+    "readiness": "Mature / active",
+    "stars": 19299,
+    "last_push": "2026-10-07",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v2026.8.1",
+      "date": "2026-09-23"
+    },
+    "macos_min": null,
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/yaak.png",
+      "source_url": "https://yaak.app/static/screenshot.png",
+      "alt": "Yaak in dark mode with a request sidebar, a GraphQL query editor showing autocomplete, and a JSON response pane"
+    },
+    "claims": [
+      {
+        "metric": "scale",
+        "value": "3,286 requests without lag",
+        "platform": "all",
+        "source": "https://yaak.app",
+        "quote": "Manage 3,286 requests with no lag"
+      }
+    ],
+    "ux_wins": [
+      "Offline-first, no account needed",
+      "REST, GraphQL, gRPC, WebSocket and SSE in one app",
+      "Workspaces mirror to the filesystem for Git sync"
+    ],
+    "caveats": [
+      "Tauri webview UI, not native widgets",
+      "Prebuilt binaries need a license for commercial use",
+      "No published RAM or size numbers"
+    ],
+    "one_liner": "Offline-first Tauri API client for REST, GraphQL, gRPC, WebSocket and SSE that imports Postman and Insomnia collections."
+  },
+  {
+    "id": 47,
+    "slug": "tablepro",
+    "name": "TablePro",
+    "repo": "TableProApp/TablePro",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "TablePlus / DBeaver",
+    "replaces_key": "tableplus",
+    "stack": "Swift · SwiftUI + AppKit · native drivers",
+    "type": "native-swiftui",
+    "readiness": "Growing / active",
+    "stars": 6225,
+    "last_push": "2026-10-10",
+    "license": "AGPL-3.0",
+    "latest_release": {
+      "tag": "v0.79.0",
+      "date": "2026-10-09"
+    },
+    "macos_min": "13",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/tablepro.png",
+      "source_url": "https://raw.githubusercontent.com/TableProApp/TablePro/HEAD/.github/assets/app-light.png",
+      "alt": "TablePro with a table list sidebar and an editable data grid of orders, with inserted, deleted and edited rows highlighted"
+    },
+    "claims": [],
+    "ux_wins": [
+      "No Electron, no JDBC, no JavaScript runtime",
+      "Native tabs, multi-window and split panes",
+      "MCP server for Cursor, Raycast and Claude Desktop"
+    ],
+    "caveats": [
+      "Some features (iCloud Sync, Compare & Sync) need a paid license",
+      "Many engines ship as on-demand plugins",
+      "No published size or memory numbers"
+    ],
+    "one_liner": "Open source native Mac database client aiming to be TablePlus without the closed source, covering 37 SQL and NoSQL engines."
+  },
+  {
+    "id": 48,
+    "slug": "tusk",
+    "name": "Tusk",
+    "repo": "alpcanaydin/tusk",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "DBeaver / TablePlus",
+    "replaces_key": "dbeaver",
+    "stack": "Rust · GPUI · sqlx",
+    "type": "native-gpu",
+    "readiness": "Young / active",
+    "stars": 375,
+    "last_push": "2026-10-05",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v0.2.1",
+      "date": "2026-09-30"
+    },
+    "macos_min": "14",
+    "apple_silicon_only": true,
+    "screenshot": {
+      "file": "assets/screenshots/tusk.png",
+      "source_url": "https://raw.githubusercontent.com/alpcanaydin/tusk/HEAD/docs/screenshots/ai-panel.png",
+      "alt": "Tusk with a SQL editor and results grid on the left and the AI panel explaining a generated top-customers query on the right"
+    },
+    "claims": [
+      {
+        "metric": "grid_scale",
+        "value": "Millions of rows scroll smoothly (no number for RAM or fps)",
+        "platform": "all",
+        "source": "https://github.com/alpcanaydin/tusk#why-tusk",
+        "quote": "Tables with millions of rows scroll smoothly because the grid is virtualized and GPU-rendered."
+      }
+    ],
+    "ux_wins": [
+      "Command palette for everything",
+      "Pending edits saved together in one transaction",
+      "AI writes queries into a new tab but never runs them"
+    ],
+    "caveats": [
+      "Very young (v0.2)",
+      "macOS build is Apple Silicon only",
+      "20 database connectors, verify each before production use"
+    ],
+    "one_liner": "Keyboard-first database client on Zed's GPUI framework, with a GPU-rendered virtualized grid and no Electron or webview."
+  },
+  {
+    "id": 49,
+    "slug": "fsnotes",
+    "name": "FSNotes",
+    "repo": "glushchenko/fsnotes",
+    "repo_exists": true,
+    "category": "devtools",
+    "replaces": "Notion / Electron notes apps",
+    "replaces_key": "notion",
+    "stack": "Swift · AppKit · plain Markdown files",
+    "type": "native-appkit",
+    "readiness": "Mature / active",
+    "stars": 7522,
+    "last_push": "2026-10-09",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "v7.3.6",
+      "date": "2026-10-09"
+    },
+    "macos_min": "12.4",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/fsnotes.jpg",
+      "source_url": "https://fsnot.es/img/fsnotes7/FSNotes7_macOS_Dark.webp?v=2",
+      "alt": "FSNotes in dark mode with folders and tags sidebar, a note list, and a rendered Markdown note with code blocks and an image"
+    },
+    "claims": [
+      {
+        "metric": "scale",
+        "value": "10,000+ notes",
+        "platform": "macOS / iOS",
+        "source": "https://github.com/glushchenko/fsnotes#why-choose-fsnotes",
+        "quote": "Search and navigate smoothly across collections of 10,000+ notes."
+      }
+    ],
+    "ux_wins": [
+      "Notes are plain Markdown files, no lock-in",
+      "iCloud Drive, Dropbox and Git backups",
+      "AES-256 encrypted notes, Mermaid and MathJax"
+    ],
+    "caveats": [
+      "No Notion-style databases or real-time collaboration",
+      "Signed builds are paid on the App Store",
+      "macOS minimum taken from build settings, not stated in README"
+    ],
+    "one_liner": "Native Mac and iOS notes app that keeps every note as a portable Markdown file, with fast search across 10,000+ notes."
+  },
+  {
+    "id": 50,
+    "slug": "netnewswire",
+    "name": "NetNewsWire",
+    "repo": "Ranchero-Software/NetNewsWire",
+    "repo_exists": true,
+    "category": "media",
+    "replaces": "Feedly / browser RSS readers",
+    "replaces_key": "feedly",
+    "stack": "Swift · AppKit / UIKit",
+    "type": "native-appkit",
+    "readiness": "Mature / active",
+    "stars": 10459,
+    "last_push": "2026-10-10",
+    "license": "MIT",
+    "latest_release": {
+      "tag": "mac-7.1.5",
+      "date": "2026-09-29"
+    },
+    "macos_min": "15",
+    "apple_silicon_only": false,
+    "screenshot": {
+      "file": "assets/screenshots/netnewswire.jpg",
+      "source_url": "https://netnewswire.com/images/NNW7-Light.png",
+      "alt": "NetNewsWire for Mac in light mode with smart feeds and folders, a timeline of articles, and an article from Colossal open in the reader pane"
+    },
+    "claims": [],
+    "ux_wins": [
+      "Classic three-pane native reader",
+      "Supports RSS, Atom, JSON Feed and RSS-in-JSON",
+      "Free, no ads, no account required"
+    ],
+    "caveats": [
+      "No AI summaries or feed intelligence like Feedly Pro",
+      "Sync depends on iCloud or a third-party service",
+      "macOS minimum taken from build settings, not stated in README"
+    ],
+    "one_liner": "Free, open source native feed reader for Mac and iOS, a fast three-pane replacement for Feedly in a browser tab."
+  }
+]

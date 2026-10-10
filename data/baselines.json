@@ -1,0 +1,571 @@
+{
+  "slack": {
+    "name": "Slack",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~124 MB download, ~518 MB installed",
+      "source": "https://downloads.slack-edge.com/desktop-releases/mac/arm64/4.52.178/Slack-4.52.178-macOS.dmg",
+      "note": "v4.52.178 arm64 DMG Content-Length 124,496,038 bytes (checked 2026-10-10). Mac App Store lists 169 MB. Installed size 518 MB and Electron v44 per https://desktopinsights.com/apps/slack"
+    },
+    "reported_ram": [
+      {
+        "value": "~130 MB to ~960 MB per workspace",
+        "context": "per signed-in team, p10 to p99, each team in its own webview (pre-2019 architecture)",
+        "source": "https://slack.engineering/reducing-slacks-memory-footprint/",
+        "date": "2017-03",
+        "quote": "This application can consume between ~130MB (p10) and ~960MB (p99) of memory depending on team activity and UI state."
+      },
+      {
+        "value": "more than 1.5 GB",
+        "context": "macOS, signed into several communities (pre-rewrite)",
+        "source": "https://medium.com/@matt.at.ably/wheres-all-my-cpu-and-memory-gone-the-answer-slack-9e5c39207cab",
+        "date": "2017-07",
+        "quote": "more than 1.5GB of memory"
+      },
+      {
+        "value": "~50% less than the previous client",
+        "context": "Slack's own claim for the 2019 rebuild (single Electron process, Redux store per workspace); no absolute MB given in text",
+        "source": "https://slack.engineering/rebuilding-slack-on-the-desktop/",
+        "date": "2019-07",
+        "quote": "One of our primary metrics has been memory usage"
+      }
+    ],
+    "notes": "Still Electron; Slack's own engineering posts are the best memory data but predate 2020, no credible recent measurement found."
+  },
+  "discord": {
+    "name": "Discord",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~215 MB download, ~837 MB installed",
+      "source": "https://dl.discordapp.net/apps/osx/0.0.415/Discord.dmg",
+      "note": "v0.0.415 universal DMG Content-Length 215,037,189 bytes (checked 2026-10-10). Installed size 837 MB and Electron v42 per https://desktopinsights.com/apps/discord"
+    },
+    "reported_ram": [
+      {
+        "value": "<1 GB normal, auto-restart experiment above 4 GB",
+        "context": "Discord employee statement on Windows client memory",
+        "source": "https://old.reddit.com/r/discordapp/comments/1pej7l7/restart_on_excessive_memory_usage_experiment/",
+        "date": "2025-12",
+        "quote": "Yes, we're testing a restart when memory exceeds 4GB (normal usage is <1GB)"
+      },
+      {
+        "value": "~5% reduction in p95 memory after leak fixes",
+        "context": "Discord's statement on its memory-leak effort, reported by Windows Latest",
+        "source": "https://www.windowslatest.com/2025/12/06/discord-admits-its-windows-11-app-is-a-resource-hog-tests-auto-restart-when-ram-usage-exceeds-4gb/",
+        "date": "2025-12-06",
+        "quote": "Overall, we're seeing a 5% reduction in p95 memory so far, with more work to be done"
+      },
+      {
+        "value": "~1 GB typical",
+        "context": "Windows 11, press coverage of Discord's admission",
+        "source": "https://www.pcworld.com/article/3005317/discord-admits-windows-11-app-hogs-ram-tries-solving-it-with-auto-restarts.html",
+        "date": "2025-12-09",
+        "quote": "The Discord app's memory usage is typically around 1GB"
+      }
+    ],
+    "notes": "Best-sourced entry: Discord itself admitted ~1 GB normal and up to 4 GB, and shipped an auto-restart as mitigation."
+  },
+  "whatsapp": {
+    "name": "WhatsApp Desktop (Mac)",
+    "framework": "Mac Catalyst (native, iOS codebase); Windows client is now a WebView2 wrapper of web.whatsapp.com",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~289 MB download, ~511 MB installed",
+      "source": "https://web.whatsapp.com/desktop/mac_native/release/?version=2.26.40.20&extension=zip&configuration=Release&branch=master&is_buck=true",
+      "note": "v2.26.40.20 'mac_native' zip Content-Length 288,951,136 bytes (checked 2026-10-10, URL from Homebrew cask). Installed 511 MB, framework detected as Swift, per https://desktopinsights.com/apps/whatsapp. The Mac App Store listing is the universal iOS app (id310633997, 391 MB)."
+    },
+    "reported_ram": [
+      {
+        "value": "232 MB idle, 268 MB with 10 chats open",
+        "context": "Mac Catalyst beta, macOS Ventura, Activity Monitor",
+        "source": "https://www.genbeta.com/mensajeria-instantanea/whatsapp-llevaba-anos-secuestrando-nuestros-mac-pc-windows-10-11-fin-han-solucionado",
+        "date": "2023-01-24",
+        "quote": "Monitor de Actividad indica en macOS Ventura un uso de RAM de 232 MB."
+      },
+      {
+        "value": "635 MB idle, ~1167 MB with 10 chats open",
+        "context": "old Electron WhatsApp Desktop for Mac (since retired), same test",
+        "source": "https://www.genbeta.com/mensajeria-instantanea/whatsapp-llevaba-anos-secuestrando-nuestros-mac-pc-windows-10-11-fin-han-solucionado",
+        "date": "2023-01-24",
+        "quote": "se dispara a aproximadamente 1167 MB de RAM"
+      },
+      {
+        "value": "~300 MB before login, ~1.2 GB after sync and scrolling",
+        "context": "Windows 11, new WebView2 web-wrapper client (vs <100 MB idle for the old native WinUI app)",
+        "source": "https://windowslatest.com/2025/12/07/ram-prices-soar-but-popular-windows-11-apps-are-using-more-ram-due-to-electron-web-components",
+        "date": "2025-12-07",
+        "quote": "already sits around 300 MB of RAM before you even log in"
+      }
+    ],
+    "notes": "The 2025 web-wrapper regression hit Windows (WebView2), not Mac; Mac is still the Catalyst app, and no 2025-2026 Mac RAM measurement was found."
+  },
+  "spotify": {
+    "name": "Spotify",
+    "framework": "CEF (Chromium Embedded Framework)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~174 MB download, ~623 MB installed",
+      "source": "https://download.scdn.co/SpotifyARM64.dmg",
+      "note": "v1.3.4.258 arm64 DMG Content-Length 173,558,481 bytes (checked 2026-10-10). Installed 623 MB, CEF, per https://desktopinsights.com/apps/spotify. Spotify adopted CEF in 2011 per https://engineering.atspotify.com/2019/3/building-spotifys-new-web-player"
+    },
+    "reported_ram": [
+      {
+        "value": "~185 MB at startup, 700+ MB after interaction",
+        "context": "Linux client review",
+        "source": "https://linuxlinks.com/streaming-linux-spotify",
+        "date": "2022-09-14",
+        "quote": "Even at startup the app uses nearly 185MB of RAM."
+      },
+      {
+        "value": "~1.16 GB",
+        "context": "macOS Sequoia 15.3, user reply in community memory-leak thread",
+        "source": "https://community.spotify.com/t5/Desktop-Mac/Spotify-has-a-memory-leak-Mac-Desktop/m-p/6124533/highlight/true",
+        "date": "2025",
+        "quote": "even in 2025, the app is taking 1.16 GB of RAM"
+      }
+    ],
+    "notes": "Framework is well documented by Spotify; RAM data is only a 2022 Linux review and forum anecdotes."
+  },
+  "youtube": {
+    "name": "YouTube (browser tab)",
+    "framework": "Web app in browser tab (Polymer/Lit, Chromium renderer)",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [
+      {
+        "value": "~470-530 MB RSS (~222-341 MB PSS)",
+        "context": "single 1080p video tab, Chromium 148/Chrome 149, clean profile, Linux smaps_rollup",
+        "source": "https://www.superchargebrowser.com/library/chrome-ram-usage-per-tab-2026/",
+        "date": "2026-06",
+        "quote": "YouTube (1080p video) | ~222-341 MB | ~470-530 MB"
+      },
+      {
+        "value": "several GB per tab",
+        "context": "May 2026 YouTube front-end bug (layout recalculation loop) across Firefox, Chrome, Edge, Brave",
+        "source": "https://www.creatorhandbook.net/youtube-bug-sends-browser-ram-usage-soaring/",
+        "date": "2026-05-13",
+        "quote": "several gigabytes of RAM"
+      }
+    ],
+    "notes": "SuperchargeBrowser is a vendor blog (tab-suspender product) but publishes its methodology."
+  },
+  "youtube-music": {
+    "name": "YouTube Music (web)",
+    "framework": "Web app in browser tab",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [],
+    "notes": "No credible YouTube Music-specific memory measurement found; see the youtube entry for general YouTube tab figures."
+  },
+  "element": {
+    "name": "Element Desktop",
+    "framework": "Electron (wraps Element Web, React)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~280 MB download, ~1.1 GB installed",
+      "source": "https://packages.element.io/desktop/update/macos/Element-1.12.30-universal-mac.zip",
+      "note": "v1.12.30 universal zip Content-Length 280,426,177 bytes (checked 2026-10-10). Installed 1136 MB and Electron v44 per https://desktopinsights.com/apps/element"
+    },
+    "reported_ram": [
+      {
+        "value": "V8 heap idling ~1.3 GB (1.1 GB after GC)",
+        "context": "Matrix project lead (ara4n) diagnosing his own long-lived account; expected ~500 MB",
+        "source": "https://github.com/element-hq/element-web/issues/25264",
+        "date": "2023-05-02",
+        "quote": "my v8 heap was idling around 1.3GB (1.1GB after GC), perilously close to the 1.5GB limit"
+      },
+      {
+        "value": "1.5 GB, 2.5 GB, 5 GB",
+        "context": "user report, text chat only",
+        "source": "https://github.com/element-hq/element-desktop/issues/499",
+        "date": "2023-01-01",
+        "quote": "Element uses more than 500 MB RAM. My cases: 1500 RAM, 2500 RAM, 5000 MB RAM."
+      },
+      {
+        "value": ">6.4 GB then crash",
+        "context": "NixOS, Element 1.12.6, scrolling a chat with many voice messages",
+        "source": "https://github.com/element-hq/element-desktop/issues/2765",
+        "date": "2026-01-05",
+        "quote": "App consumes more than 6.4 GB RAM and then crashes when scrolling up in a chat"
+      }
+    ],
+    "notes": "Good primary-source data from official GitHub repos, including a heap diagnosis by the Matrix project lead."
+  },
+  "twitch": {
+    "name": "Twitch (web chat)",
+    "framework": "Web app in browser tab (React)",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [],
+    "notes": "Only old (circa 2016-2019) forum anecdotes about Twitch stream tabs found, nothing credible for chat specifically."
+  },
+  "mastodon-web": {
+    "name": "Mastodon (web)",
+    "framework": "Web app in browser tab (React/Redux, served by Rails)",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [],
+    "notes": "No published client-side memory measurements found for the Mastodon web UI."
+  },
+  "gmail": {
+    "name": "Gmail (web)",
+    "framework": "Web app in browser tab (Closure-based)",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [
+      {
+        "value": "~350-450 MB RSS (~120-180 MB PSS)",
+        "context": "full inbox tab, Chromium 148/Chrome 149, clean profile, no extensions",
+        "source": "https://www.superchargebrowser.com/library/chrome-ram-usage-per-tab-2026/",
+        "date": "2026-06",
+        "quote": "Gmail (full inbox) | ~120-180 MB | ~350-450 MB"
+      }
+    ],
+    "notes": "One measured source, from a vendor blog with stated methodology."
+  },
+  "superhuman": {
+    "name": "Superhuman",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~125 MB download, ~475 MB installed",
+      "source": "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-1041.0.69-arm64-latest-mac.zip",
+      "note": "v1041.0.69 arm64 zip Content-Length 125,344,928 bytes (checked 2026-10-10). Installed 475 MB and Electron v41 per https://desktopinsights.com/apps/superhuman. CTO Conrad Irwin said they moved from node-webkit to Electron: https://reactiflux.com/transcripts/conrad-irwin"
+    },
+    "reported_ram": [],
+    "notes": "Framework confirmed; no published memory numbers found."
+  },
+  "vscode": {
+    "name": "Visual Studio Code",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~329 MB download, ~987 MB installed",
+      "source": "https://update.code.visualstudio.com/1.141.0/darwin-arm64/stable",
+      "note": "v1.141.0 arm64 zip Content-Length 328,788,027 bytes (checked 2026-10-10). Installed 987 MB and Electron v43 per https://desktopinsights.com/apps/visual-studio-code"
+    },
+    "reported_ram": [
+      {
+        "value": "3-4 GB+",
+        "context": "with many extensions; competitor (Zed) comparison page",
+        "source": "https://zed.dev/compare/vscode",
+        "date": "2026-05-01",
+        "quote": "Good performance out of the box, but slows with many extensions. Can use 3-4GB+ RAM."
+      },
+      {
+        "value": "~222-332 MB",
+        "context": "plain Electron shell loading vscode.dev (macOS 332 MB, Ubuntu 222 MB, Windows 312 MB), Tauri benchmark issue; a lower bound, not the VS Code app",
+        "source": "https://github.com/tauri-apps/tauri/issues/5889",
+        "date": "2022-12",
+        "quote": null
+      }
+    ],
+    "notes": "Thin on neutral data: the only big number is a competitor's claim; no official Microsoft memory figure found."
+  },
+  "cursor": {
+    "name": "Cursor",
+    "framework": "Electron (VS Code fork)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~304 MB download, ~1.1 GB installed",
+      "source": "https://downloads.cursor.com/production/37b865941ccb31e2fc90c685157534efca87f964/darwin/arm64/Cursor-darwin-arm64.zip",
+      "note": "v3.24.12 arm64 zip Content-Length 304,208,456 bytes (checked 2026-10-10). Installed ~1117 MB and Electron v42 per https://desktopinsights.com/apps/cursor"
+    },
+    "reported_ram": [
+      {
+        "value": "~21-22 GB total (renderer 5.14 GB, GPU 3.51 GB, many extension hosts)",
+        "context": "macOS Apple Silicon, 64 GB RAM, Cursor 3.1.17; staff confirmed a renderer leak",
+        "source": "https://forum.cursor.com/t/cursor-consuming-22-gb-ram-across-dozens-of-helper-processes-ide-becomes-extremely-slow/158844",
+        "date": "2026-04-23",
+        "quote": "yep, that's a leak"
+      },
+      {
+        "value": "renderer >5 GB, rising to ~8 GB",
+        "context": "macOS 26.3.1, M4, 16 GB, Cursor 3.1.17",
+        "source": "https://forum.cursor.com/t/excessive-memory-usage-by-cursor-renderer/158856",
+        "date": "2026-04-23",
+        "quote": "Hey, this looks like one of the known renderer memory leaks."
+      }
+    ],
+    "notes": "Official forum threads with staff acknowledging renderer leaks; heavy-use numbers only, no idle baseline."
+  },
+  "hyper": {
+    "name": "Hyper",
+    "framework": "Electron (xterm.js, React)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~88 MB download, ~371 MB installed",
+      "source": "https://github.com/vercel/hyper/releases/download/v3.4.1/Hyper-3.4.1-mac-arm64.zip",
+      "note": "v3.4.1 arm64 zip Content-Length 88,240,309 bytes (checked 2026-10-10). Installed 371 MB (Intel build) and Electron v20 per https://desktopinsights.com/apps/hyper. Latest release v3.4.1 is from 2023-01-08."
+    },
+    "reported_ram": [
+      {
+        "value": "~170 MB vanilla, more with plugins",
+        "context": "Windows 10, Hyper 3.0.0 canary",
+        "source": "https://github.com/vercel/hyper/issues/3561",
+        "date": "2019-04-10",
+        "quote": "still _relatively_ when vanilla (around 170MB)"
+      },
+      {
+        "value": "~200 MB after startup",
+        "context": "user comment on a terminal-emulator discussion",
+        "source": "https://dev.to/huytd/why-do-you-use-web-based-terminal-emulators-2em7",
+        "date": "2019-09-07",
+        "quote": "hyper is heavy, taking about 200MB memory after startup"
+      }
+    ],
+    "notes": "Data is old (2019) and the project has had no release since January 2023."
+  },
+  "warp": {
+    "name": "Warp",
+    "framework": "Rust + GPU rendering (custom UI framework, Metal on macOS)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~335 MB download, ~894 MB installed",
+      "source": "https://releases.warp.dev/stable/v0.2026.10.07.08.29.stable_00/Warp.dmg",
+      "note": "v0.2026.10.07 universal DMG size 334,892,135 bytes (checked 2026-10-10). Installed 894 MB, Rust runtime, per https://desktopinsights.com/apps/warp"
+    },
+    "reported_ram": [
+      {
+        "value": "~100 MB before, 500+ MB after update",
+        "context": "Windows 11, 1-2 tabs, v0.2025.10.29 regression",
+        "source": "https://github.com/warpdotdev/warp/issues/7938",
+        "date": "2025-10-31",
+        "quote": "Warp's memory usage has increased dramatically from an average of ~100MB to over 500MB, even with minimal tabs open"
+      },
+      {
+        "value": "~400-500 MB RSS normal, ~7.3-7.4 GB degraded",
+        "context": "macOS, tsh ssh subshell tabs",
+        "source": "https://github.com/warpdotdev/warp/issues/8934",
+        "date": "2026-03-23",
+        "quote": "During normal usage, Warp stays within ~400–500 MB RSS and <1 GB physical footprint."
+      }
+    ],
+    "notes": "Native Rust, not Electron, but issues on its official repo report 400-500 MB normal use and multi-GB regressions."
+  },
+  "gitkraken": {
+    "name": "GitKraken Desktop",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~218 MB download, ~1.3 GB installed",
+      "source": "https://api.gitkraken.dev/releases/production/darwin/arm64/12.6.0/GitKraken-v12.6.0.zip",
+      "note": "v12.6.0 arm64 zip Content-Length 217,689,863 bytes (checked 2026-10-10). Installed 1290 MB and Electron v41 per https://desktopinsights.com/apps/gitkraken"
+    },
+    "reported_ram": [],
+    "notes": "No published numbers, but GitKraken's own help page (updated 2026-03) advises: \"Restart GitKraken Desktop daily to clear any accumulated memory or cache usage.\" https://help.gitkraken.com/gitkraken-desktop/performance-issues/"
+  },
+  "github-desktop": {
+    "name": "GitHub Desktop",
+    "framework": "Electron (React, TypeScript)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~482 MB download, ~1.2 GB installed",
+      "source": "https://desktop.githubusercontent.com/releases/3.6.7-dbc92f97/GitHubDesktop-arm64.zip",
+      "note": "v3.6.7 arm64 zip Content-Length 481,763,140 bytes (checked 2026-10-10). Installed 1171 MB and Electron v42 per https://desktopinsights.com/apps/github-desktop"
+    },
+    "reported_ram": [],
+    "notes": "Only an old open issue (desktop/desktop#3149, 2017, 'RAM usage increases over time') with numbers in a screenshot; no quotable figure."
+  },
+  "postman": {
+    "name": "Postman",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~206 MB download, ~615 MB installed",
+      "source": "https://dl.pstmn.io/download/version/12.31.7/osx_arm64",
+      "note": "v12.31.7 arm64 Content-Length 205,745,079 bytes (checked 2026-10-10). Installed 615 MB and Electron v37 per https://desktopinsights.com/apps/postman"
+    },
+    "reported_ram": [
+      {
+        "value": "~280 MB at launch, 450-600 MB with 3 collections, 700 MB+ with several workspaces",
+        "context": "M2 MacBook Pro 16 GB; published by competitor Apidog",
+        "source": "https://apidog.com/blog/postman-slow-bloated-2026-alternatives/",
+        "date": "2026",
+        "quote": null
+      },
+      {
+        "value": "crash at 3.5-4 GB",
+        "context": "looping collection run, Windows and macOS",
+        "source": "https://github.com/postmanlabs/postman-app-support/issues/11562",
+        "date": "2022-12-17",
+        "quote": "The Postman App process crashes when the process used memory is reaching 3.5/4 GBytes of RAM."
+      },
+      {
+        "value": ">600 MB",
+        "context": "Windows 8.1, Postman 7.0.3",
+        "source": "https://github.com/postmanlabs/postman-app-support/issues/6015",
+        "date": "2019-03-05",
+        "quote": "Postman is a resource hog on Windows 8.1. Is slow, consumes huge amounts of RAM."
+      }
+    ],
+    "notes": "Idle numbers come from a competitor's blog; the official issue tracker has leak reports."
+  },
+  "insomnia": {
+    "name": "Insomnia",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~381 MB download, ~1.5 GB installed",
+      "source": "https://github.com/Kong/insomnia/releases/download/core%4013.3.1/Insomnia.Core-13.3.1.dmg",
+      "note": "v13.3.1 DMG Content-Length 380,798,951 bytes (checked 2026-10-10). Installed 1461 MB (universal) and Electron v43 per https://desktopinsights.com/apps/insomnia"
+    },
+    "reported_ram": [
+      {
+        "value": ">4 GB at startup",
+        "context": "macOS 14.6.1, Insomnia 9.3.3",
+        "source": "https://github.com/Kong/insomnia/issues/7826",
+        "date": "2024-08-11",
+        "quote": "the application eats up more than 4Gb of RAM when starting"
+      },
+      {
+        "value": ">5 GB",
+        "context": "Windows, 50-100 endpoints",
+        "source": "https://github.com/Kong/insomnia/issues/8861",
+        "date": "2025-07-11",
+        "quote": "It consumes over 5 GB RAM and it's literally impossible to use if a browser or IDE is opened."
+      }
+    ],
+    "notes": "User reports on the official Kong/insomnia repo, both still open."
+  },
+  "tableplus": {
+    "name": "TablePlus",
+    "framework": "Native (Swift, Objective-C, C/C++)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~156 MB download, ~718 MB installed",
+      "source": "https://files.tableplus.com/macos/818/TablePlus.dmg",
+      "note": "v27.0.2 (build 818) DMG Content-Length 156,100,743 bytes (checked 2026-10-10). Installed 718 MB (universal), Swift, per https://desktopinsights.com/apps/tableplus"
+    },
+    "reported_ram": [],
+    "notes": "Already native and proprietary; only qualitative vendor claims ('doesn't eat up much memory'), no published numbers."
+  },
+  "dbeaver": {
+    "name": "DBeaver Community",
+    "framework": "Java / Eclipse RCP (SWT), bundled JRE",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~123 MB download, ~193 MB installed",
+      "source": "https://dbeaver.io/files/26.2.2/dbeaver-ce-26.2.2-macos-aarch64.dmg",
+      "note": "v26.2.2 aarch64 DMG Content-Length 122,907,891 bytes (checked 2026-10-10). Installed size 193 MB, JVM runtime, per https://desktopinsights.com/apps/dbeaver-community"
+    },
+    "reported_ram": [
+      {
+        "value": "1 GB default max heap (-Xmx1024m), users raise to 2-4 GB",
+        "context": "default dbeaver.ini JVM heap cap, not measured usage",
+        "source": "https://github.com/dbeaver/dbeaver/issues/35837",
+        "date": "2024-10-06",
+        "quote": "I have to manually edit dbeaver.ini to increase the jvm heap from 1024 to 2048"
+      },
+      {
+        "value": "grows to 5 GB heap then 'Java heap space' error",
+        "context": "loading table list over MySQL 8.0.36 with Connector 8.2.0, DBeaver 24.0.4",
+        "source": "https://github.com/dbeaver/dbeaver/issues/32940",
+        "date": "2024-05-15",
+        "quote": "the memory occupation grows until the maximum allowed (I have increased it up to 5GB)"
+      }
+    ],
+    "notes": "No idle RSS measurement found; heap-cap issues on the official repo are the best evidence."
+  },
+  "notion": {
+    "name": "Notion",
+    "framework": "Electron (Mac app migrating to SwiftUI per WWDC 2026)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~125 MB download, ~480 MB installed",
+      "source": "https://desktop-release.notion-static.com/Notion-7.37.1-arm64.dmg",
+      "note": "v7.37.1 arm64 DMG Content-Length 124,756,305 bytes (checked 2026-10-10). Installed 480 MB and Electron v43 per https://desktopinsights.com/apps/notion"
+    },
+    "reported_ram": [],
+    "notes": "No credible RAM numbers found. MacRumors (2026-06-12): Notion 'has long been criticized for the sluggishness that comes with its Electron-based architecture' and is moving to SwiftUI. https://macrumors.com/2026/06/12/notion-is-migrating-to-swiftui"
+  },
+  "obsidian": {
+    "name": "Obsidian",
+    "framework": "Electron",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~234 MB download, ~920 MB installed",
+      "source": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.dmg",
+      "note": "v1.14.4 universal DMG Content-Length 233,704,463 bytes (checked 2026-10-10). Installed 920 MB and Electron v43 per https://desktopinsights.com/apps/obsidian"
+    },
+    "reported_ram": [
+      {
+        "value": "2,760 MB with plugins, <250 MB after plugins reset",
+        "context": "PC, 2 tabs open; community plugins were the cause",
+        "source": "https://forum.obsidian.md/t/pc-memory-issues-with-obsidian/83978",
+        "date": "2024-06-19",
+        "quote": "using 2760 mb of memory"
+      }
+    ],
+    "notes": "Memory depends heavily on community plugins and vault size; only forum anecdotes."
+  },
+  "feedly": {
+    "name": "Feedly (web)",
+    "framework": "Web app in browser tab",
+    "kind": "web-tab",
+    "install_size": null,
+    "reported_ram": [],
+    "notes": "No memory data. TechCrunch (2026-08-17) covered a week-long web-app slowdown users called 'unusably slow', caused by a resorting-logic bug. https://techcrunch.com/2026/08/17/feedly-attributes-weeklong-slowdown-to-bug-not-its-ai-pivot"
+  },
+  "netease": {
+    "name": "NetEase Cloud Music",
+    "framework": "CEF (Chromium Embedded Framework)",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~1.1 GB installed",
+      "source": "https://desktopinsights.com/apps/neteasemusic",
+      "note": "v3.1.9 universal, CEF runtime, 1129 MB per Desktop Insights. Official DMG (https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.9.3364.dmg) returned 403 to a size check."
+    },
+    "reported_ram": [],
+    "notes": "Only a 2015 V2EX anecdote found; no credible current memory figures."
+  },
+  "jellyfin": {
+    "name": "Jellyfin Media Player / Jellyfin web",
+    "framework": "Qt WebEngine (Chromium) hosting jellyfin-web, plus libmpv for playback",
+    "kind": "desktop-app",
+    "install_size": {
+      "value": "~186 MB download, ~593 MB installed",
+      "source": "https://github.com/jellyfin/jellyfin-media-player/releases/download/v1.12.0/JellyfinMediaPlayer-1.12.0-AppleSilicon.dmg",
+      "note": "v1.12.0 Apple Silicon DMG Content-Length 186,166,526 bytes (checked 2026-10-10). Installed 593 MB, Qt, per https://desktopinsights.com/apps/jellyfin-media-player. Repo now named 'Jellyfin Desktop' and describes itself as 'built with Qt WebEngine and libmpv'."
+    },
+    "reported_ram": [
+      {
+        "value": "up to 4 GB",
+        "context": "browsing large libraries (1000+ items) in the JMP UI; same browsing smooth in a browser",
+        "source": "https://forum.jellyfin.org/t-jellyfin-media-player-very-slow-ui",
+        "date": "2025-06-08",
+        "quote": "The RAM usage of the player then increases up to 4GB."
+      }
+    ],
+    "notes": "One forum report; no official numbers."
+  },
+  "claude-code-cli": {
+    "name": "Claude Code (CLI)",
+    "framework": "TypeScript + React Ink TUI, shipped as a Bun-compiled single binary (formerly npm/Node.js)",
+    "kind": "cli",
+    "install_size": {
+      "value": "~228 MB binary",
+      "source": "https://downloads.claude.ai/claude-code-releases/2.1.287/darwin-arm64/claude",
+      "note": "v2.1.287 darwin-arm64 native binary Content-Length 227,827,120 bytes (checked 2026-10-10). Bun's role in the native installer: https://bun.com/blog/bun-joins-anthropic"
+    },
+    "reported_ram": [
+      {
+        "value": "~700 MB RSS per idle instance",
+        "context": "Linux, two sessions ~1.4 GiB total (ps output shows ~370-500 MB RSS)",
+        "source": "https://github.com/anthropics/claude-code/issues/61425",
+        "date": "2026-05-22",
+        "quote": "Each claude CLI process consumes ~700 MB of RSS memory, even at idle with no active task running."
+      },
+      {
+        "value": "~12 GB",
+        "context": "macOS 15.5, Claude Code 2.1.19, extended session",
+        "source": "https://github.com/anthropics/claude-code/issues/23252",
+        "date": "2026-02-05",
+        "quote": "Claude Code CLI exhibits excessive memory consumption (~12GB) during normal usage."
+      }
+    ],
+    "notes": "Plenty of user reports on the official repo (many closed as fixed); no official baseline."
+  }
+}
